@@ -48,7 +48,7 @@ header .nav {
 }
 
 .nav > div {
-  padding-left: clamp(25px, 5vw, 90px);
+  margin-left: clamp(25px, 5vw, 90px);
   font-size: clamp(0.9rem, 3.2vw, 1.4rem);
 }
 
