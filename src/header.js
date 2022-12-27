@@ -1,5 +1,5 @@
 import Icon from "./img/icon.png";
-import { homePage, contactPage } from "./index.js";
+import { homePage, contactPage, menuPage } from "./index.js";
 
 export default function createHeader() {
   const header = document.createElement("header");
@@ -23,6 +23,7 @@ export default function createHeader() {
   header.append(icon, nav);
 
   tab1.addEventListener("click", homePage);
+  tab2.addEventListener("click", menuPage);
   tab3.addEventListener("click", contactPage);
 
   return header;

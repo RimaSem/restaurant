@@ -180,3 +180,56 @@ footer .references {
   font-size: clamp(1.1rem, 1.5vw, 1.4rem);
   font-weight: 700;
 }
+
+/* Menu section styling */
+.menu-section img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.menu-section h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vh;
+  margin-bottom: 10rem;
+}
+
+.menu-item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.57);
+  width: clamp(300px, 40vw, 500px);
+  border: 1px solid #000000;
+  background-color: #0f0f0fd7;
+}
+
+.menu-item p {
+  color: rgb(211, 211, 211);
+  font-weight: 700;
+  margin: 0.2vh;
+}
+
+.menu-item p:nth-of-type(3) {
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
+
+.menu-item p:nth-of-type(4) {
+  color: orange;
+}
+
+@media only screen and (max-width: 500px) {
+  .menu-item {
+    width: 95vw;
+  }
+}
