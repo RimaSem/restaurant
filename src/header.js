@@ -1,8 +1,8 @@
 import Icon from "./img/icon.png";
+import { homePage, contactPage } from "./index.js";
 
 export default function createHeader() {
   const header = document.createElement("header");
-  // const icon = document.createElement("img");
   const icon = new Image();
   icon.src = Icon;
 
@@ -12,27 +12,18 @@ export default function createHeader() {
   const tab1 = document.createElement("div");
   const tab2 = document.createElement("div");
   const tab3 = document.createElement("div");
-  tab1.className = "tab1";
-  tab2.className = "tab2";
-  tab3.className = "tab3";
+  tab1.classList.add("tab1");
+  tab2.classList.add("tab2");
+  tab3.classList.add("tab3");
+  tab1.textContent = "Home";
+  tab2.textContent = "Menu";
+  tab3.textContent = "Contact";
 
-  nav.appendChild(tab1);
-  nav.appendChild(tab2);
-  nav.appendChild(tab3);
+  nav.append(tab1, tab2, tab3);
+  header.append(icon, nav);
 
-  header.appendChild(icon);
-  header.appendChild(nav);
-
-  const tabs = ["Home", "Menu", "Contact"];
-  tabs.forEach((item) => {
-    const tabDiv = document.createElement("div");
-    const tab = document.createElement("p");
-    tab.classList.add("tab");
-    tab.textContent = item;
-    // button.addEventListener("click", switchPages);
-    tabDiv.appendChild(tab);
-    nav.appendChild(tabDiv);
-  });
+  tab1.addEventListener("click", homePage);
+  tab3.addEventListener("click", contactPage);
 
   return header;
 }
